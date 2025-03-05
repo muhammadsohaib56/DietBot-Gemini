@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Recommendation Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <!-- Left Panel: Customization Options -->
+        <div class="customization-panel">
+            <div class="customization-header">
+                <div class="purple-bar"></div>
+                <p>Change the colors to customize your bot</p>
+            </div>
+            <div class="customization-section">
+                <h3>Theme</h3>
+                <div class="theme-options">
+                    <button class="theme-btn selected" data-theme="light">
+                        <i class="fas fa-sun"></i><span>Light</span>
+                    </button>
+                    <button class="theme-btn" data-theme="dark">
+                        <i class="fas fa-moon"></i><span>Dark</span>
+                    </button>
+                </div>
+            </div>
+            <div class="customization-section">
+                <h3>Color</h3>
+                <div class="color-options">
+                    <label>Accent color</label>
+                    <div class="swatches">
+                        <span class="swatch selected" style="background-color: #6a0dad;" data-color="#6a0dad"></span>
+                        <span class="swatch" style="background-color: #dc3545;" data-color="#dc3545"></span>
+                        <span class="swatch" style="background-color: #fd7e14;" data-color="#fd7e14"></span>
+                        <span class="swatch" style="background-color: #ffc107;" data-color="#ffc107"></span>
+                        <span class="swatch" style="background-color: #28a745;" data-color="#28a745"></span>
+                        <span class="swatch" style="background-color: #007bff;" data-color="#007bff"></span>
+                        <span class="swatch" style="background-color: #20c997;" data-color="#20c997"></span>
+                        <span class="swatch" style="background-color: #e83e8c;" data-color="#e83e8c"></span>
+                        <span class="swatch" style="background-color: #6610f2;" data-color="#6610f2"></span>
+                        <span class="swatch gradient" data-color="gradient"></span>
+                    </div>
+                </div>
+                <div class="color-options">
+                    <label>Bot messages</label>
+                    <div class="swatches">
+                        <span class="swatch selected" style="background-color: #e9ecef;" data-color="#e9ecef"></span>
+                        <span class="swatch" style="background-color: #f8f9fa;" data-color="#f8f9fa"></span>
+                        <span class="swatch" style="background-color: #343a40;" data-color="#343a40"></span>
+                        <span class="swatch" style="background-color: #6c757d;" data-color="#6c757d"></span>
+                        <span class="swatch gradient" data-color="gradient"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel: Chat Interface -->
+        <div class="chat-container">
+            <div class="chat-header">
+                <div class="bot-info">
+                    <i class="fas fa-robot bot-avatar"></i>
+                    <h2>DietBot</h2>
+                </div>
+            </div>
+            <div class="chat-box" id="chat-box">
+                <!-- Chat messages will appear here -->
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Suggested reply here">
+                <button id="send-btn"><i class="fas fa-chevron-down"></i></button>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
