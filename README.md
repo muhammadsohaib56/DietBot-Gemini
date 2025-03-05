@@ -1,2 +1,2 @@
-# Chatbot-DeepSeek-API
-Building a chatbot for FYP HealthGenix using DeepSeek's API key for question and answering
+# Chatbot-Gemini-API
+Building a chatbot for FYP HealthGenix using Geminis's API key for question and answering
